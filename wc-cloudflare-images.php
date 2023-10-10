@@ -14,3 +14,16 @@
  * Text Domain:       wc-cloudflare-images
  * Domain Path:       /languages
  */
+// Plug-in activation
+function wcci_activate() {
+    require plugin_dir_path(__FILE__) . "includes/wcci-activation.php";
+}
+
+register_activation_hook( __FILE__, "wcci_activate" );
+
+// Plug-in deactivate
+function wcci_deactivate() {
+    
+}
+
+register_deactivation_hook( __FILE__, "wcci_deactivate" );
